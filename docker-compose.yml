@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    container_name: kokodi-db
+    restart: always
+    environment:
+      POSTGRES_DB: kokodi_db
+      POSTGRES_USER: kokodi_user
+      POSTGRES_PASSWORD: 123456
+    ports:
+      - "4343:5432"
+    volumes:
+      - postgres_kokodi:/var/lib/postgresql/data
+
+volumes:
+  postgres_kokodi:

@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: kokodi
+
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:4343/kokodi_db
+    username: kokodi_user
+    password: 123456
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        highlight_sql: true
+
+jwt:
+  expiration: 86400
+  secret: dSDj12-3sdalKJN2-DAljn21-danLSND12o9ueKJsjdn
+
+server:
+  port: 3434
